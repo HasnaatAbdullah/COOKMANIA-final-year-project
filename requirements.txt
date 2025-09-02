@@ -1,0 +1,39 @@
+# ===========================================
+# COOKMANIA - Recipe Recommendation System
+# Backend & Machine Learning Dependencies
+# ===========================================
+
+# ---------------------
+# Web Framework
+# ---------------------
+Flask==3.0.3            # Flask framework to build RESTful APIs
+Flask-Cors==4.0.1       # For handling cross-origin requests from Android app
+
+# ---------------------
+# Machine Learning & Data Processing
+# ---------------------
+numpy==1.26.4           # Numerical computations
+pandas==2.2.2           # Data preprocessing & dataset management
+scikit-learn==1.5.0     # Training and using ML models
+nltk==3.8.1             # Natural Language Processing for recipe ingredients
+joblib==1.4.2           # For saving and loading trained ML models
+
+# ---------------------
+# Database Management
+# ---------------------
+SQLAlchemy==2.0.32      # Object Relational Mapper for SQLite database
+
+# ---------------------
+# API & HTTP Requests
+# ---------------------
+requests==2.32.3        # For communicating between backend and other services
+
+# ---------------------
+# Deployment & Production Server
+# ---------------------
+gunicorn==22.0.0        # WSGI server for deploying Flask app
+
+# ---------------------
+# Optional: Development & Debugging
+# ---------------------
+ipython==8.26.0         # Better interactive development environment
