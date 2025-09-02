@@ -3,7 +3,6 @@ import pickle
 import pandas 
 import numpy as np 
 app = Flask(  name  ) 
-24 
 # Load the dictionary from the pickle file 
 with open('model11.pkl', 'rb') as file: 
 loaded_objects = pickle.load(file) 
@@ -18,9 +17,7 @@ input_tfidf_vector = vectorizer.transform([input_features]).toarray()
 # Query BallTree for nearest neighbors 
 _, indices = balltree.query(input_tfidf_vector, k=10) 
 # Get the recommended recipes details 
-recommended_recipes 
-= 
-'TranslatedInstructions']] 
+recommended_recipes = 'TranslatedInstructions']] 
 return recommended_recipes 
 # API endpoint for recommendation 
 @app.route('/') 
@@ -35,7 +32,6 @@ ingre2 = request.form.get('ingre2')
 ingre3 = request.form.get('ingre3') 
 ingredients = [ingre1, ingre2, ingre3] 
 # Call the recommend function with the required arguments 
-25 
 recommended_recipes = recommend(ingredients, new_df, vectorizer, balltree) 
 # Format recommendations as a list of strings 
 recommendations_list = [] 
@@ -69,10 +65,7 @@ return jsonify({'recommendations': recommendations_text})
 @app.route('/recommend2', methods=['POST']) 
 def getrecommendations(): 
 # Get ingredients from the form data 
-ingre1 = request.form.get('ingre1') 
-= 
-= 
-26 
+ingre1 = request.form.get('ingre1')  
 ingre2 = request.form.get('ingre2') 
 ingre3 = request.form.get('ingre3') 
 ingre4 = request.form.get('ingre4') 
@@ -93,3 +86,4 @@ recommendations_text = '\n'.join(recommendations_list)
 return jsonify({'recommendations': recommendations_text}) 
 if  name == ' main ': 
 app.run(debug=True) 
+
