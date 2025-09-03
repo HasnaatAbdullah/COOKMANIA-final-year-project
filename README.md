@@ -1,153 +1,137 @@
-🍳 COOKMANIA – Intelligent Recipe Recommendation System
+# 🍳 COOKMANIA – Intelligent Recipe Recommendation System
+*A Machine Learning-Powered Mobile Application for Personalized Cooking Experiences*
 
-A Machine Learning-Powered Mobile Application for Personalized Cooking Experiences
+![License](https://img.shields.io/badge/License-MIT-blue.svg)
+![Python](https://img.shields.io/badge/Python-3.8%2B-green.svg)
+![Android](https://img.shields.io/badge/Android%20Studio-IDE-orange)
+![Machine Learning](https://img.shields.io/badge/Machine%20Learning-TF--IDF%20%7C%20Cosine%20Similarity-yellow)
 
-📌 Abstract
+---
 
-Cookmania is an Android-based recipe recommendation system powered by Machine Learning.
-The application allows users to enter available ingredients and recommends suitable recipes instantly.
-It leverages TF-IDF vectorization, Cosine Similarity, and BallTree algorithms to provide personalized and accurate recommendations.
-The system also aims to reduce food waste, improve cooking efficiency, and enhance user experience by offering curated recipes based on real-time ingredient availability.
+## 📌 **Abstract**
+**Cookmania** is an **Android-based recipe recommendation system** powered by **Machine Learning**.  
+The app allows users to enter **available ingredients** and instantly recommends **personalized recipes**.  
+It leverages **TF-IDF vectorization**, **Cosine Similarity**, and **BallTree algorithms** to deliver accurate and efficient results.  
 
-1. Introduction
+The goal is to:
+- Minimize **food waste** 🥗
+- Enhance **cooking efficiency** ⏳
+- Improve **user experience** 📱
 
-Cooking is one of the most essential yet time-consuming daily activities. Most recipe platforms only allow keyword searches or predefined filters, but they fail to consider available ingredients.
-Cookmania bridges this gap by using a machine learning-driven recommendation engine that analyzes the user’s ingredients and suggests recipes accordingly.
+---
 
-Key Highlights:
+## **1. Introduction**
+Cooking is a daily necessity but can be **time-consuming** when recipe decisions depend on missing ingredients.  
+Most existing apps **don’t consider ingredient availability**, forcing users to search manually.  
+**Cookmania** solves this problem by using **machine learning** to provide **real-time recipe recommendations**.
 
-Built as a mobile application using Android Studio
+### **Key Highlights**
+- 📱 Mobile app developed with **Android Studio**
+- ⚡ Real-time ML-based **recipe recommendations**
+- 🧠 **Flask + Python APIs** integrated with the app
+- 🎨 User-friendly, intuitive interface
 
-Backend powered by Flask & Python APIs
+---
 
-Real-time ML-based recipe recommendation
+## **2. Problem Statement**
+- Existing cooking apps provide **generic recipe lists** but lack **ingredient-based personalization**.
+- Users waste **time**, **effort**, and **ingredients** when recipes require unavailable items.
+- **Cookmania** solves this by:
+  - Accepting **ingredients from the user**
+  - Recommending recipes based on what’s available
+  - Helping minimize **food waste**
 
-Interactive and user-friendly interface
+---
 
-2. Problem Statement
+## **3. Objectives**
+- 🥘 **Personalized Recommendations** → Suggest recipes based on available ingredients  
+- 🌱 **Food Waste Reduction** → Reduce unused ingredients  
+- 🧠 **Machine Learning Integration** → Use **TF-IDF + Cosine Similarity + BallTree**  
+- 📱 **Seamless Mobile Experience** → Easy-to-use Android app  
+- 🔄 **Scalability** → Future-ready design for multilingual recipes & image-based recognition  
 
-Existing cooking apps provide generic recipe lists but lack ingredient-based personalization.
-Users often struggle when they don’t have all ingredients for a recipe, resulting in wasted food, effort, and time.
-Cookmania solves this problem by analyzing the ingredients users already have and recommending the best possible dishes — minimizing food waste and improving cooking efficiency.
+---
 
-3. Objectives
+## **4. System Architecture**
+The **Cookmania** system is built on three core layers:
 
-🥘 Personalized Recommendations → Suggest recipes based on user-provided ingredients
+### **1. Frontend (Mobile App)**
+- Built using **Android Studio (Java + XML)**
+- Ingredient input & recipe display interface
 
-🌱 Food Waste Reduction → Help users utilize existing ingredients efficiently
+### **2. Backend (API & Model)**
+- Powered by **Flask**
+- Handles API requests, model integration & result generation
 
-🧠 Machine Learning Integration → Use TF-IDF and Cosine Similarity for accurate recommendations
+### **3. Machine Learning Model**
+- Uses **TF-IDF** for vectorizing ingredients  
+- Employs **Cosine Similarity + BallTree** for optimized recipe matching  
+- Dataset includes **multi-cuisine translated recipes**
 
-📱 Seamless Mobile Experience → Build an intuitive Android app with clean UI
+---
 
-🔄 Scalable Design → Prepare architecture for future improvements like multilingual recipes & image recognition
+## **5. Methodology**
 
-4. System Architecture
+### **Step 1 — Dataset Collection**
+- Gathered a **multi-cuisine recipe dataset** including names, instructions, and ingredients.
 
-The Cookmania system is divided into three main layers:
+### **Step 2 — Data Preprocessing**
+- Removed duplicates & missing values  
+- Tokenized ingredient lists  
+- Converted text to lowercase for **consistency**
 
-1. Frontend (User Interface)
+### **Step 3 — Model Training**
+- **TF-IDF Vectorizer** → Converts recipes into numerical vectors  
+- **Cosine Similarity** → Measures closeness of ingredients  
+- **BallTree** → Optimizes nearest-neighbor searches
 
-Built using Android Studio (XML & Java)
+### **Step 4 — API Development**
+- Built **Flask REST APIs**  
+- Integrated trained ML model with Android app
 
-Ingredient input & recipe display interface
+### **Step 5 — Mobile App Development**
+- Developed an intuitive UI in **Android Studio**  
+- Allows users to **input ingredients** and **get recommendations instantly**
 
-2. Backend (API & Model Integration)
+---
 
-Built using Flask
+## **6. Tools & Technologies**
 
-Handles API requests, model integration & response delivery
+| **Category**      | **Technologies Used**                  |
+|-------------------|---------------------------------------|
+| **Languages**     | Python, Java, XML                     |
+| **Frameworks**    | Flask, Volley API                     |
+| **Libraries**     | Scikit-learn, Pandas, NumPy           |
+| **Database**      | SQLite                                |
+| **IDE & Tools**   | Android Studio, PyCharm, Google Colab, Postman, Ngrok |
+| **Version Control** | Git & GitHub                        |
 
-3. Machine Learning Model
+---
 
-Uses TF-IDF Vectorization to represent recipes
+## **7. Results**
 
-Employs Cosine Similarity + BallTree for efficient recipe matching
+| **Model**                   | **Accuracy** | **Recommendation Speed** |
+|----------------------------|--------------|---------------------------|
+| TF-IDF + Cosine Similarity | 91%          | Fast                      |
+| TF-IDF + BallTree          | **93%**      | **Optimized**             |
+| Traditional Search         | 70%          | Slow                      |
 
-Dataset includes multi-cuisine recipes with translated ingredients
+> **Cookmania achieved 93% accuracy** using **TF-IDF + BallTree** for ingredient-based recipe recommendations.
 
-5. Methodology
-Step 1: Dataset Collection
+---
 
-Gathered a diverse dataset of multi-cuisine recipes with names, instructions, and ingredients
+## **8. Future Enhancements**
+- 🌐 **Multi-language Recipes** → Support for global cuisines  
+- 🥗 **Ingredient Image Recognition** → Predict ingredients from photos  
+- 📊 **Nutrition-based Recommendations** → Healthier and customized recipes  
+- 🌍 **International Datasets** → Broader collection of cuisines  
+- ☁️ **Cloud Deployment** → Host API for global scalability
 
-Step 2: Data Preprocessing
+---
 
-Removed duplicates & missing values
+## **9. How to Run the Project**
 
-Cleaned and tokenized ingredient lists
-
-Converted text into lowercase for uniformity
-
-Step 3: Model Training
-
-TF-IDF Vectorizer → Converts recipes into numerical vectors
-
-Cosine Similarity → Measures similarity between ingredients
-
-BallTree Algorithm → Optimizes search for nearest recipes
-
-Step 4: API Development
-
-Implemented REST APIs in Flask
-
-Integrated the trained model with Android application
-
-Step 5: Mobile App Development
-
-Built using Android Studio
-
-Simple UI to input ingredients and display recommendations
-
-6. Tools & Technologies
-Category	Technologies Used
-Languages	Python, Java, XML
-Frameworks	Flask, Volley API
-Libraries	Scikit-learn, Pandas, NumPy
-Database	SQLite
-IDE & Tools	Android Studio, PyCharm, Google Colab, Postman, Ngrok
-Version Control	Git & GitHub
-7. Results
-Model	Accuracy	Recommendation Speed
-TF-IDF + Cosine Similarity	91%	Fast
-TF-IDF + BallTree	93%	Optimized
-Traditional Search	70%	Slow
-
-Cookmania achieved a 93% accuracy with optimized TF-IDF & BallTree-based recipe recommendations.
-
-8. Future Enhancements
-
-🌐 Multi-language Support → Recipes in multiple languages
-
-🥗 Ingredient Image Recognition → Predict ingredients using images
-
-📊 Advanced Personalization → Nutrition-based recommendations
-
-🌍 International Recipes → Expand dataset to include global cuisines
-
-☁️ Cloud Deployment → Host the API for large-scale usage
-
-9. How to Run the Project
-Step 1 — Clone the Repository
+### **Step 1 — Clone the Repository**
+```bash
 git clone https://github.com/yourusername/cookmania.git
 cd cookmania
-
-Step 2 — Install Dependencies
-pip install -r requirements.txt
-
-Step 3 — Run the Flask Server
-python app.py
-
-Step 4 — Launch the Mobile App
-
-Open the Cookmania project in Android Studio
-
-Configure your API URL
-
-Run the app on an emulator or physical device
-
-10. Authors
-
-👨‍💻 Hasnaat Abdullah
-📧 Email: hasnatmughal17131@gmail.com
-
